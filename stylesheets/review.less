@@ -1,0 +1,75 @@
+.source {
+  .review {
+    -webkit-font-smoothing: antialiased;
+
+    .markup.heading {
+      font-weight: bold;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .comment.quote {
+      font-style: italic;
+    }
+
+    .raw {
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+  }
+}
+.editor {
+  .review {
+    .markup {
+      &.heading {
+        color: #A6E22E;
+        font-weight: bold;
+      }
+
+      &.underline {
+        color: #E6DB74;
+        text-decoration: underline;
+      }
+    }
+
+    .block {
+      .identifier {
+        color: #F92672;
+      }
+
+      .caption {
+        color: #AE81FF;
+      }
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .raw {
+      color: #66D9EF;
+    }
+
+    .variable.list {
+      color: #F92672;
+      font-weight: bold;
+    }
+
+    .link {
+      color: #CCC;
+
+      .entity {
+        color: #AE81FF;
+      }
+    }
+  }
+}

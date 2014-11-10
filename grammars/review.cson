@@ -1,0 +1,178 @@
+'name': 'ReVIEW'
+'scopeName': 'source.review'
+'fileTypes': [
+  're'
+]
+'patterns': [
+  {
+    'begin': '@<b>\\{'
+    'end': '\\}'
+    'name': 'markup.bold.review'
+  }
+  {
+    'begin': '@<i>\\{'
+    'end': '\\}'
+    'name': 'markup.italic.review'
+  }
+  {
+    'begin': '@<strong>\\{'
+    'end': '\\}'
+    'name': 'markup.strong.review'
+  }
+  {
+    'begin': '@<em>\\{'
+    'end': '\\}'
+    'name': 'markup.em.review'
+  }
+  {
+    'begin': '@<kw>\\{'
+    'end': '\\}'
+    'name': 'markup.keyword.review'
+  }
+  {
+    'begin': '@<chap>\\{'
+    'end': '\\}'
+    'name': 'markup.chapter.review'
+  }
+  {
+    'begin': '@<title>\\{'
+    'end': '\\}'
+    'name': 'markup.title.review'
+  }
+  {
+    'begin': '@<chapref>\\{'
+    'end': '\\}'
+    'name': 'markup.chapref.review'
+  }
+  {
+    'match': '@<ruby>\\{([^,]+), ([^\\}]+)\\}'
+    'name': 'ruby'
+    'captures':
+      '1':
+        'name': 'markup.ruby.base.review'
+      '2':
+        'name': 'markup.ruby.text.review'
+  }
+  {
+    'begin': '@<ami>\\{'
+    'end': '\\}'
+    'name': 'markup.ami.review'
+  }
+  {
+    'begin': '^={1}\\s+'
+    'end': '$'
+    'name': 'markup.heading.heading-1.review'
+    'patterns': [
+      {
+        'include': '$self'
+      }
+    ]
+  }
+  {
+    'begin': '^={2}\\s+'
+    'end': '$'
+    'name': 'markup.heading.heading-2.review'
+    'patterns': [
+      {
+        'include': '$self'
+      }
+    ]
+  }
+  {
+    'begin': '^={3}\\s+'
+    'end': '$'
+    'name': 'markup.heading.heading-3.review'
+    'patterns': [
+      {
+        'include': '$self'
+      }
+    ]
+  }
+  {
+    'begin': '^={4}\\s+'
+    'end': '$'
+    'name': 'markup.heading.heading-4.review'
+    'patterns': [
+      {
+        'include': '$self'
+      }
+    ]
+  }
+  {
+    'begin': '^={5}\\s+'
+    'end': '$'
+    'name': 'markup.heading.heading-5.review'
+    'patterns': [
+      {
+        'include': '$self'
+      }
+    ]
+  }
+  {
+    'begin': '^(===\\[column\\] )(.*)$'
+    'beginCaptures':
+      '1':
+        'name': 'markup.column.tag.begin.review'
+      '2':
+        'name': 'markup.column.title.review'
+    'end': '^===\\[/column\\]$'
+    'endCaptures':
+      '0':
+        'name': 'markup.column.tag.end.review'
+    'name': 'column'
+  }
+  {
+    'begin': '^//(\\w+)(\\[([^\\[]+)\\])?(\\[([^\\[]+)\\])?\\{$'
+    'beginCaptures':
+      '0':
+        'name': 'markup.block.tag.begin.review'
+      '1':
+        'name': 'tag-name'
+      '3':
+        'name': 'identifier'
+      '5':
+        'name': 'caption'
+    'end': '^//}$'
+    'endCaptures':
+      '0':
+        'name': 'markup.block.tag.end.review'
+    'name': 'block'
+  }
+  {
+    'match': '@<href>\\{([^,]*), ([^\\}]+)\\}'
+    'name': 'link'
+    'captures':
+      '1':
+        'name': 'markup.underline.link.review'
+      '2':
+        'name': 'entity.review'
+  }
+  {
+    'match': '^\\s+(\\*+)[ \\t]+'
+    'captures':
+      '1':
+        'name': 'variable.unordered.list.review'
+  }
+  {
+    'match': '^\\s+(\\d+\\.)[ \\t]+'
+    'captures':
+      '1':
+        'name': 'variable.ordered.list.review'
+  }
+  {
+    'match': '^\\s*(:)[ \\t]+(.+)$'
+    'captures':
+      '1':
+        'name': 'variable.definition.list.review'
+      '2':
+        'name': 'variable.definition-title.list.review'
+  }
+  {
+    'begin': '#@#'
+    'captures':
+      '1':
+        'name': 'punctuation.definition.comment.review'
+    'end': '$\\n?'
+    'name': 'comment.line.review'
+  }
+]

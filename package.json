@@ -1,0 +1,9 @@
+{
+  "name": "language-review",
+  "version": "0.0.1",
+  "description": "Syntax highlighting and snippets for ReVIEW.",
+  "repository": "",
+  "engines": {
+    "atom": "*"
+  }
+}
