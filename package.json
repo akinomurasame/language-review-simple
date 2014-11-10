@@ -1,6 +1,6 @@
 {
   "name": "language-review",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Syntax highlighting and snippets for ReVIEW.",
   "repository": "https://github.com/akinomurasame/language-review",
   "engines": {
