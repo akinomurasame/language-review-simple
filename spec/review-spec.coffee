@@ -3,7 +3,7 @@ describe "ReVIEW grammar", ->
 
   beforeEach ->
     waitsForPromise ->
-      atom.packages.activatePackage("language-review")
+      atom.packages.activatePackage("language-review-simple")
 
     runs ->
       grammar = atom.syntax.grammarForScopeName("source.review")
