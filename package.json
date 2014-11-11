@@ -1,8 +1,8 @@
 {
-  "name": "language-review",
+  "name": "language-review-simple",
   "version": "0.1.0",
   "description": "Syntax highlighting and snippets for ReVIEW.",
-  "repository": "https://github.com/akinomurasame/language-review",
+  "repository": "https://github.com/akinomurasame/language-review-simple",
   "engines": {
     "atom": "*"
   }
